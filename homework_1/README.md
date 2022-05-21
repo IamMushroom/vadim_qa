@@ -39,7 +39,7 @@ tall foldername1/textfile1.txt -n 2
 ### 19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
 less foldername1/textfile1.txt –> :q
 ### 20) вывести дату и время
-date
+date или date +"%D %T"
 ## Задачи со звёздочкой
 ### 1) Отправить http запрос на сервер http://162.55.220.72:5005/terminal-hw-request  
 curl http://162.55.220.72:5005/terminal-hw-request
