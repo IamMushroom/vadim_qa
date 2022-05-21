@@ -1,0 +1,5 @@
+Hello, World!
+Hello, Dima!
+Hello, Vadim!
+Hello, Natasha!
+Hello, all!
