@@ -42,7 +42,7 @@
     CTRL+d
 
 11. Через cat добавить в текстовый файл tf_2.txt строку “the sec 3”
-    cat >> tf_3.txt
+    cat >> tf_2.txt
     the sec 3
     CTRL+d
 
@@ -52,7 +52,7 @@
     CTRL+d
 
 13. Через cat добавить в текстовый файл tf_2.txt строку “the seConD 2”
-    cat >> tf_3.txt
+    cat >> tf_2.txt
     the seConD 2
     CTRL+d
 
@@ -108,10 +108,10 @@
     > ./inner_dir_1/tf_4.txt
 
 21. Найти путь к файлам у которых есть  “tf” в названии.
-    find . -name "*tf*"
+    find . -name "*tf*" -type f
 
 22. Найти путь к файлам у которых есть  “tf” в названии и буквы в любом регистре.
-    find . -name "*[tT][fF]*"
+    find . -name "*[tT][fF]*" -type f
 
 23. Найти строки в файлах где есть комбинация букв “sec” в текущей папке
     grep --exclude-dir=* -rn -e "sec"
@@ -155,7 +155,7 @@
     find . -type f | xargs grep -v "second"
 
 32. Найти только название и путь к файлам где нет комбинации “second”
-    find . -type f | xargs grep -v "second" | cut -f1 -d:
+    find . -type f | xargs grep -lv "second" | cut -f1 -d:
 
 33. Вывести в терминал 4 последних строк любого текстового файла
     tail -n 4 inner_dir_1/tF_5.txt
@@ -170,7 +170,7 @@
     grep -rne "sec" | cut -f1 -d: | xargs mv -t inner_dir_1
 
 37. Команда в одну строку. Скопировать в любую одну папку текстовые файлы у которых в содержимом есть слово “sec”
-    grep -rne "sec" | cut -f1 -d: | xargs cp -t inner_dir_1
+    grep -rne "sec" | cut -f1 -d: | xargs cp -t inner_dir_2
 
 38. Команда в одну строку. Найти все строки c “sec” во всех текстовых файлах, скопировать и вставить эти строки в один новый созданный текстовый файл.
     touch all_sec.txt && grep -rne "sec" | cut -f3 -d: | xargs -r0 -n1 echo >> all_sec.txt
