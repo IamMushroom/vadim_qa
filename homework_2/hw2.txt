@@ -155,7 +155,7 @@
     find . -type f | xargs grep -v "second"
 
 32. Найти только название и путь к файлам где нет комбинации “second”
-    find . -type f | xargs grep -lv "second" | cut -f1 -d:
+    find . -type f | xargs grep -Lv "second" | cut -f1 -d:
 
 33. Вывести в терминал 4 последних строк любого текстового файла
     tail -n 4 inner_dir_1/tF_5.txt
